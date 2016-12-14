@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Sanyara Ermoshin](https://up.htmlacademy.ru/adaptive/9/user/178367).
-* Наставник: `Неизвестно`.
+* Наставник: `Нет`.
 
 ---
 
