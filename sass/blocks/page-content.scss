@@ -1,0 +1,38 @@
+.page-content__header {
+  padding: 70px 0 76px;
+  background: #f1f1f1;
+}
+.page-content__title {
+  margin: 0 auto;
+  text-align: center;
+  width: 81.25%;
+}
+@media #{$tablet-widths} {
+  .page-content__header  {
+    position: relative;
+    padding: 96px 0 80px;
+    z-index: -1;
+    &::after {
+      @include ps-el(100%, 24px, none);
+      bottom: -12px;
+      left: 0;
+      background: transparent url("../img/bg-zigzag-fill.svg") repeat-x 0 0px;
+      background-size: auto 23px;
+    }
+  }
+  .page-content__title {
+    width: auto;
+  }
+}
+@media #{$desktop-widths} {
+  .page-content__header  {
+    padding: 95px 0 100px;
+    &::after {
+      @include ps-el(100%, 36px);
+      bottom: -20px;
+      left: 0;
+      background: transparent url("../img/bg-zigzag-fill.svg") repeat-x 0 1px;
+      background-size: auto 34px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.catalog {
+  padding: 15px 9.375%;
+}
+
+@media #{$tablet-widths} {
+  .catalog {
+    padding: 52px 6.51% 26px;
+  }
+}
+@media #{$desktop-widths} {
+  .catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 131px 4.347% 7px;
+  }
+}

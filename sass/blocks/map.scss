@@ -1,0 +1,29 @@
+.map {
+  height: 457px;
+  margin-bottom: 39px;
+  background: transparent url("../img/map-mobile@1x.jpg") no-repeat 50% 50%;
+  @media #{$retina} and #{$mobile-widths} {
+    background:  url("../img/map-mobile@2x.jpg") no-repeat 50% 50%;
+    background-size: 320px auto;
+  }
+}
+@media #{$tablet-widths} {
+  .map {
+    margin-bottom: 55px;
+    background: transparent url("../img/map-tablet@1x.jpg") no-repeat 50% 50%;
+    @media #{$retina} {
+      background:  url("../img/map-tablet@2x.jpg") no-repeat 50% 50%;
+      background-size: 768px auto;
+    }
+  }
+}
+@media #{$desktop-widths} {
+  .map {
+    width: 50%;
+    background: transparent url("../img/map-desktop@1x.jpg") no-repeat 50% 50%;
+    @media #{$retina} {
+      background:  url("../img/map-desktop@2x.jpg") no-repeat 50% 50%;
+      background-size: 525px auto;
+    }
+  }
+}

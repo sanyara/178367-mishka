@@ -1,0 +1,116 @@
+.contacts {
+  position: relative;
+  padding: 36px 0 38px;
+  background: #fff;
+}
+.contacts__title {
+  padding: 0 9.375%;
+  @include font-sans-bold(18px, 30px);
+  margin-left: -2px;
+  margin-bottom: 26px;
+}
+.contacts__item {
+  display: flex;
+  padding: 0 9.375%;
+  margin-bottom: 30px;
+  &--address {
+    margin-bottom: 37px;
+  }
+}
+.contacts__text {
+  line-height: 30px;
+  overflow: hidden;
+  &:first-child {
+    width: 30%;
+  }
+  &:nth-child(2) {
+    width: 70.38%;
+  }
+}
+.contacts__mail-link {
+  @include ib();
+  position: relative;
+  &::after {
+    @include ps-el(100, 1px, #62d1ba);
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &:hover {
+    color: #62d1ba;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+@media #{$tablet-widths} {
+  .contacts {
+    padding: 62px 0 57px;
+    background: transparent url("../img/icon-flag.svg") no-repeat right 7.2% top 47px;
+  }
+  .contacts__title {
+    width: 100%;
+    padding: 0 6.51%;
+    margin-left: -5px;
+    margin-bottom: 48px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+  .contacts__content {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 6.51%;
+  }
+  .contacts__item {
+    width: 50%;
+    padding: 0;
+    font-size: 17px;
+  }
+  .contacts__text {
+    letter-spacing: -0.1px;
+    &:first-child {
+      width: 23.053%;
+    }
+    &:nth-child(2) {
+      width: 76.94%;
+    }
+  }
+}
+@media #{$desktop-widths} {
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 85px 4.347% 50px;
+    background: transparent url("../img/icon-flag.svg") no-repeat 10.3% 223px;
+  }
+  .contacts__title {
+    position: relative;
+    top: 146px;
+    width: 100%;
+    padding-left: 16.66%;
+    margin-bottom: 19px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+  .contacts__content {
+    display: block;
+    width: 50%;
+    padding-top: 176px;
+    padding-left: 16.66%;
+    padding-right: 0;
+  }
+  .contacts__item {
+    width: 100%;
+  }
+  .contacts__text {
+    letter-spacing: -0.1px;
+    &:first-child {
+      width: 22%;
+    }
+    &:nth-child(2) {
+      width: 76.94%;
+    }
+  }
+}

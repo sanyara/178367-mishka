@@ -1,0 +1,61 @@
+body {
+  min-width: 320px;
+  @include font-sans(15px);
+  font-style: normal;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: rgba(#444, 0.4);
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: rgba(#444, 0.4);
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: rgba(#444, 0.4);
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: rgba(#444, 0.4);
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans.woff2") format("woff2"),
+       url("../fonts/opensans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/opensansbold.woff2") format("woff2"),
+       url("../fonts/opensansbold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  margin: 0;
+  @include font-sans-bold(27px, 30px);
+}
+h2 {
+  @include font-sans-bold(25px, 30px);
+}
+h3 {
+  @include font-sans-bold(17px, 24px);
+}
+@media #{$tablet-widths} {
+  h1 {
+    @include font-sans-bold(43px, 50px);
+  }
+  h2 {
+    @include font-sans-bold(43px, 50px);
+  }
+  h3 {
+    @include font-sans-bold(20px, 24px);
+  }
+}
+@media #{$desktop-widths} {
+  h1 {
+    @include font-sans-bold(53px, 57px);
+  }
+  h2 {
+    @include font-sans-bold(53px, 57px);
+  }
+}

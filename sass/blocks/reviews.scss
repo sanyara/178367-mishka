@@ -1,0 +1,197 @@
+.reviews {
+  position: relative;
+  padding: 22px 9.375% 50px;
+  &::after {
+    @include ps-el(100%, 7px);
+    bottom: 0;
+    left: 0;
+    background: transparent url("../img/bg-zigzag-line.svg") repeat-x 50% 50%;
+    background-size: auto 7px;
+  }
+}
+.reviews__title {
+  margin-bottom: 24px;
+}
+.reviews__text {
+  margin-bottom: 26px;
+  font-size: 15px;
+  line-height: 30px;
+  br {
+    display: none;
+  }
+}
+.reviews__author {
+  display: block;
+  margin-bottom: 3px;
+  @include font-sans-bold(18px, 24px);
+  font-style: normal;
+}
+.reviews__author-mail {
+  @include ib();
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 30px;
+}
+.reviews__controls {
+  position: relative;
+  width: 260px;
+  margin: 0 auto 38px;
+  font-size: 0;
+  border: 1px solid #ececec;
+  &::after {
+    @include ps-el(1px, 100%, #ececec);
+    left: 50%;
+  }
+}
+.reviews__btn-control {
+  position: relative;
+  @include btn-res();
+  @include ib();
+  width: 129px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 0;
+  background: #fff;
+  &::before {
+    @include ps-el(49px, 4px, #000);
+    left: 40px;
+    top: 23px;
+  }
+  &::after {
+    @include ps-el(14px, 14px, transparent);
+    left: 42px;
+    top: 16px;
+    border: 4px solid #000;
+    border-right: none;
+    border-top: none;
+    transform: rotate(45deg);
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+  &--next {
+    &::before {
+      left: auto;
+      right: 42px;
+      top: 23px;
+    }
+    &::after {
+      left: auto;
+      right: 44px;
+      top: 16px;
+      border: 4px solid #000;
+      border-left: none;
+      border-top: none;
+      transform: rotate(-45deg);
+    }
+  }
+}
+@media #{$tablet-widths} {
+  .reviews {
+    position: relative;
+    padding: 78px 6.51% 130px;
+    background: #fff url("../img/review@1x.jpg") no-repeat 0 0;
+    @media #{$retina} {
+      background:  url("../img/review@2x.jpg") no-repeat 0 0;
+      background-size: 350px auto;
+    }
+    &::after {
+      @include ps-el(100%, 15px);
+      bottom: 0;
+      left: 0;
+      background: transparent url("../img/bg-zigzag-line.svg") repeat-x 50% 50%;
+      background-size: auto 15px;
+      transform: rotate(180deg);
+    }
+  }
+  .reviews__title {
+    margin-left: -5px;
+    margin-bottom: 48px;
+  }
+  .reviews__text {
+    margin-bottom: 58px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .reviews__author {
+    font-size: 17px;
+  }
+  .reviews__author-mail {
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+  .reviews__controls {
+    position: absolute;
+    bottom: 109px;
+    right: 6.510%;
+    display: flex;
+    justify-content: space-around;;
+    width: 175px;
+    border: none;
+    &::after {
+      display: none;
+    }
+    text-align: justify;
+  }
+  .reviews__btn-control {
+    width: 49px;
+    height: 26px;
+    &::after {
+      left: 3px;
+      top: 5px;
+    }
+    &::before {
+      @include ps-el(47px, 4px, #000);
+      left: 2px;
+      top: 12px;
+    }
+    &--next {
+      &::after {
+        left: auto;
+        right: 3px;
+      }
+      &::before {
+        left: auto;
+        right: 2px;
+      }
+    }
+  }
+}
+@media #{$desktop-widths} {
+  .reviews {
+    position: relative;
+    padding: 70px 4.347% 95px;
+    background: transparent url("../img/review@1x.jpg") no-repeat 6.3% 0;
+    @media #{$retina} {
+      background:  url("../img/review@2x.jpg") no-repeat 6.3% 0;
+      background-size: 350px auto;
+    }
+    &::after {
+      @include ps-el(100%, 25px);
+      bottom: -90px;
+      left: 0;
+      background: transparent url("../img/bg-zigzag-line.svg") repeat-x 50% 50%;
+      background-size: auto 23px;
+    }
+  }
+  .reviews__title {
+    padding-left: 16.66%;
+  }
+  .reviews__item {
+    width: 90%;
+    padding-left: 16.66%;
+    br {
+      display: inline;
+    }
+  }
+  .reviews__controls {
+    bottom: 73px;
+    right: 4.347%;
+  }
+  .reviews__text {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,67 @@
+.popup-add {
+  display: inline-block;
+  padding: 31px 9.375% 47px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px #c6c6c6;
+  vertical-align: middle;
+}
+.popup-add__title {
+  width: 58.5%;
+  margin: 0 auto 12px;
+  @include font-sans-bold(25px, 30px);
+  text-transform: uppercase;
+  text-align: center;
+}
+.popup-add__caption {
+  display: block;
+  margin-bottom: 23px;
+  @include font-sans(15px, 30px);
+  text-align: center;
+}
+.popup-add__form {
+  input {
+    display: none;
+  }
+}
+.popup-add__size-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.popup-add__size-btn {
+  @include ib();
+  display: block;
+  width: 31.538%;
+  padding: 17px 0;
+  @include font-sans-bold(17px, 17px);
+  background: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 2px #ececec;
+  cursor: pointer;
+  &:hover {
+    box-shadow: inset 0 0 0 2px #c7c7c7;
+  }
+}
+.popup-add__size-options {
+  input:checked + label{
+    box-shadow: inset 0 0 0 2px #63d1bb;
+  }
+}
+@media #{$tablet-widths} {
+  .popup-add {
+    width: 568px;
+    padding: 34px 0 47px;
+  }
+  .popup-add__title {
+    width: 100%;;
+    padding: 0 100px;
+    @include font-sans-bold(30px, 57px);
+  }
+  .popup-add__form {
+    padding: 0 109px;
+  }
+  .popup-add__caption {
+    @include font-sans(17px, 30px);
+  }
+}

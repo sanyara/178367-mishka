@@ -1,0 +1,21 @@
+.social-link {
+  display: block;
+  margin: 0 14px;
+  width: 29px;
+  font-size: 0;
+  text-align: center;
+  svg {
+    pointer-events: none;
+  }
+  &:hover {
+    svg {
+      fill: #46c1ae;
+    }
+  }
+  &:active {
+    svg {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
+  }
+}
