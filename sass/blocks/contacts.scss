@@ -90,6 +90,7 @@
     top: 146px;
     width: 100%;
     padding-left: 16.66%;
+    padding-right: 50%;
     margin-bottom: 19px;
     font-size: 53px;
     line-height: 57px;
@@ -103,6 +104,9 @@
   }
   .contacts__item {
     width: 100%;
+    &--address:last-of-type {
+      margin-bottom: 166px;
+    }
   }
   .contacts__text {
     letter-spacing: -0.1px;

@@ -3,7 +3,6 @@
 }
 .catalog-item__pic {
   display: block;
-  max-width: 350px;
   margin: 0 auto;
   img {
     display: block;
@@ -78,7 +77,6 @@
   }
   .catalog-item__pic {
     width: 50%;
-    max-width: inherit;
     margin: 0;
   }
   .catalog-item__info {

@@ -58,10 +58,9 @@
 }
 .order__form-label {
   position: relative;
-  display: block;
+  @include ib();
   padding: 15px 0 15px 23.846%;
   @include font-sans-bold(17px, 18px);
-  pointer-events: none;
   &::before {
     @include ps-el(40px, 40px);
     left: 0;
@@ -69,7 +68,6 @@
     border-radius: 50%;
     box-shadow: inset 0 0 0 2px #444;
     cursor: pointer;
-    pointer-events: all;
   }
   &--color {
     padding: 22px 0 21px 23.846%;
@@ -110,6 +108,12 @@
 
 .order__input-block {
   margin-bottom: 22px;
+  &--type {
+    margin: 0;
+  }
+  &--color {
+    margin: 0;
+  }
   &--contacts {
     position: relative;
     margin-bottom: 30px;
@@ -252,16 +256,12 @@
       cursor: pointer;
     }
     &--color {
-      padding: 15px 0 14px 15.968%;
-      width: 47.704%;
+      padding: 15px 0 14px 33.5%;
       &::before {
         width: 54px;
         border-radius: 0;
         top: 0;
       }
-    }
-    &--type {
-      width: 80.838%;
     }
   }
   .order__form-group {
@@ -313,6 +313,16 @@
     display: flex;
     align-items: baseline;
     margin-bottom: 24px;
+    &--type {
+      display: block;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    &--color {
+      display: block;
+      width: 47.704%;
+      margin-bottom: 0;
+    }
     &--contacts {
       margin-bottom: 24px;
       svg {
@@ -359,9 +369,7 @@
     font-size: 17px;
     line-height: 30px;
   }
-
 }
-
 @media #{$desktop-widths} {
   .order__input-title {
     &--colored {
@@ -422,10 +430,10 @@
     padding: 13px 0 16px 9.142%;
     &--type {
       margin-bottom: 28px;
+      padding: 13px 0 16px 11.5%;
     }
     &--color {
-      width: 29.942%;
-      padding: 15px 0 14px 9.142%;
+      padding: 15px 0 14px 30.5%;
       &::before {
         @include ps-el(54px, 52px);
       }
@@ -433,6 +441,9 @@
   }
   .order__input-block {
     width: 80%;
+    &--color {
+      width: 29.942%;
+    }
     &--contacts {
       width: 83.333%;
       svg {

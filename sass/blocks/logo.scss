@@ -1,21 +1,16 @@
 .logo {
   cursor: pointer;
   img {
+    display: block;
+    width: 86px;
+    height: 35px;
     pointer-events: none;
     background: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+
   }
-}
-.logo__image-tablet,
-.logo__image-desktop {
-  display: none;
-}
-.logo__image-mobile {
-  display: block;
-  width: 86px;
-  height: 35px;
 }
 .logo:hover {
   opacity: 0.6;
@@ -24,21 +19,18 @@
   opacity: 0.3;
 }
 @media #{$tablet-widths} {
-  .logo__image-mobile,
-  .logo__image-desktop {
-    display: none;
-  }
-  .logo__image-tablet {
-    display: inline;
-    width: 113px;
-    height: 46px;
+  .logo {
+    img {
+      width: 113px;
+      height: auto;
+    }
   }
 }
 @media #{$desktop-widths} {
-  .logo__image-tablet {
-    display: none;
-  }
-  .logo__image-desktop {
-    display: block;
+  .logo {
+    img {
+      width: 149px;
+      height: auto;
+    }
   }
 }

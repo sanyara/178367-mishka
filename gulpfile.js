@@ -58,7 +58,7 @@ gulp.task("images", function() {
 });
 
 gulp.task("uglify", function() {
-  gulp.src("build/js/*.js")
+  gulp.src("build/js/script.js")
     .pipe(uglify())
     .pipe(rename({
       suffix: ".min"
