@@ -54,7 +54,7 @@
   @include font-sans-bold(19px, 19px);
 }
 @media #{$tablet-widths} {
-  .page-footer {
+  .page-footer__wrapper {
     display: flex;
     padding: 29px 6.51% 33px;
     flex-wrap: wrap;
@@ -90,11 +90,9 @@
   }
 }
 @media #{$desktop-widths} {
-  .page-footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 29px 4.347% 33px;
+  .page-footer__wrapper {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 29px 0 33px;
   }
 }

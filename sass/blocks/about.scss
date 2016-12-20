@@ -63,9 +63,17 @@
 }
 @media #{$desktop-widths} {
   .about {
-    padding: 57px 19.565% 38px 19.565%;
+    padding: 57px 0 38px;
+  }
+  .about__wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
   }
   .about__title {
+    padding: 0 16.6%;
     letter-spacing: -0.4px;
+  }
+  .about__features {
+    padding: 0 16.6%;
   }
 }

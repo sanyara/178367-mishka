@@ -74,14 +74,18 @@
 }
 @media #{$desktop-widths} {
   .production {
-    margin: 0 4.347% 106px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 106px;
+  }
+  .production__wrapper {
+    display: flex;
+    max-width: 1050px;
+    margin: 0 auto;
     padding: 0;
     flex-direction: row;
     box-shadow: inset 0 0 0 1px #ececec;
-    &:hover {
-      box-shadow: 0 5px 5px 0 rgba(#000, 0.1),
-                  inset 0 0 0 1px #ececec;
-    }
   }
   .production__video {
     width: 65.047%;
@@ -91,6 +95,10 @@
     width: 34.952%;
     padding-left: 7.32%;
     box-shadow: none;
+    &:hover {
+      box-shadow: 0 5px 5px 0 rgba(#000, 0.1),
+                  inset 0 0 0 1px #ececec;
+    }
   }
   .production__header {
     width: 90%;

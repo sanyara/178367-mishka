@@ -80,10 +80,17 @@
 }
 @media #{$desktop-widths} {
   .contacts {
+    padding: 0;
+    background: #fff;
+  }
+  .contacts__wrapper {
+    position: relative;
+    max-width: 1050px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 85px 4.347% 50px;
-    background: transparent url("../img/icon-flag.svg") no-repeat 10.3% 223px;
+    padding: 85px 0 50px;
+    background: transparent url("../img/icon-flag.svg") no-repeat 63px 223px;
   }
   .contacts__title {
     position: relative;

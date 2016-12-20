@@ -153,12 +153,6 @@
     padding-right: 237px;
     order: -1;
     background: transparent;
-    &::after {
-      @include ps-el(114.97%, 1px, #ececec);
-      top: 0;
-      left: -7.485%;
-      right: 0;
-    }
     li {
       background: transparent;
     }
@@ -267,7 +261,7 @@
   }
   .main-nav__item--logo {
     width: 16.19%;
-    padding: 9px 0 7px;
+    padding: 9px 0 6px;
     margin: 0 auto;
     text-align: center;
   }
@@ -280,17 +274,14 @@
   }
   .main-nav__sub-list {
     position: absolute;
-    bottom: -60px;
+    top: 100%;
     left: 0;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     padding-right: 59.047%;
     &::after {
-      @include ps-el(109.523%, 1px, #e7e7e7);
-      top: 0;
-      left: -4.761%;
-      right: 0;
+      display: none;
     }
   }
   .main-nav__item--sub-list {

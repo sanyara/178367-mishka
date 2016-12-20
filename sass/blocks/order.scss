@@ -363,7 +363,9 @@
     }
   }
   .order__form-text {
-    margin: 0 6.51%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 6.51%;
     padding: 0;
     text-align: right;
     font-size: 17px;
@@ -389,8 +391,17 @@
   .order {
     padding: 124px 0 63px;
   }
+  .order__form-container {
+    position: relative;
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+  .order__contacts-wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
   .order__form-group {
-    padding: 61px 4.347%;
+    padding: 61px 0;
     &--type {
       padding: 59px 4.347% 23px;
     }
@@ -408,8 +419,8 @@
     }
   }
   .order__desc {
-    width: 60.869%;
-    padding: 0;
+    width: 1050px;
+    padding: 0 175px;
     margin: 0 auto;
   }
   .order__group-name {
@@ -458,6 +469,6 @@
     }
   }
   .order__form-text {
-    margin: 0 19.56%;
+    margin: 0 16.66% 0 auto;
   }
 }

@@ -70,10 +70,12 @@
   margin-bottom: 18px;
   @include font-sans(15px,24px);
 }
-.products__item {
-  position: relative;
+.products__item-wrapper {
   display: flex;
   flex-direction: column;
+}
+.products__item {
+  position: relative;
   padding: 27px 9.375% 42px;
   &::after {
     @include ps-el(100%, 7px);
@@ -124,13 +126,13 @@
   }
 }
 .products__item-picture {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-bottom: 21px;
+  img {
     width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-    margin-bottom: 21px;
-    img {
-      width: 100%;
-    }
+  }
 }
 .products__item-cost {
   display: block;
@@ -148,7 +150,7 @@
     min-height: 743px;
     background: #f9f9f9 url("../img/hero-desktop@1x.jpg") no-repeat 50% 0;
     @media #{$retina} {
-      background:  url("../img/hero-desktop@2x.jpg") no-repeat 50% 0;
+      background: #f9f9f9 url("../img/hero-desktop@2x.jpg") no-repeat 50% 0;
       background-size: 1150px auto;
     }
     &::after {
@@ -162,11 +164,12 @@
   .products__title {
     width: auto;
   }
-  .products__item {
-    display: flex;
+  .products__item-wrapper {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+  }
+  .products__item {
     position: relative;
     padding: 48px 6.51%;
     &::after {
@@ -248,6 +251,7 @@
     position: absolute;
     bottom: 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     width: 100%;
     padding: 0 6.51%;
@@ -262,7 +266,7 @@
       width: 150px;
       @include font-sans-bold(20px, 30px, #fff);
     }
-    &:hover {
+    &:nth-child(-n+2):hover {
       padding: 27px 5.239% 34px 5.239%;
     }
     &--toys {
@@ -273,6 +277,9 @@
   }
 }
 @media #{$desktop-widths} {
+  .products {
+    overflow: hidden;
+  }
   .products__header {
     &::after {
       @include ps-el(100%, 36px);
@@ -282,9 +289,15 @@
       background-size: auto 34px;
     }
   }
+  .products__item-wrapper {
+    position: relative;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 0 74px;
+  }
   .products__item {
     position: relative;
-    padding: 0 4.347% 74px;
+    padding: 0;
     &::after {
       @include ps-el(100%, 25px);
       bottom: 2px;
@@ -333,7 +346,10 @@
     }
   }
   .products__links {
-    padding: 0 4.347%;
+    max-width: 1050px;
+    padding: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
   .products__link {
     padding: 27px 3.609% 29px 3.609%;
@@ -351,7 +367,7 @@
         background: transparent url("../img/icon-interior.svg") no-repeat right 0 top 0;
       }
     }
-    &:hover {
+    &:nth-child(-n+2):hover {
       padding: 27px 3.609% 34px 3.609%;
     }
   }
@@ -363,11 +379,10 @@
   }
   .products__item-price {
     position: absolute;
-    width: 38.4%;
     width: 292px;
     margin-left: 0;
     bottom: 98px;
-    left: 19.565%;
+    left: 17%;
     order: 2;
   }
 }

@@ -14,6 +14,11 @@
   .page-header {
     position: relative;
     padding: 0 6.51%;
+    &::after {
+      @include ps-el(100%, 1px, #e7e7e7);
+      left: 0;
+      right: 0;
+    }
   }
   .page-header__text {
     display: block;
@@ -26,9 +31,14 @@
 @media #{$desktop-widths} {
   .page-header {
     position: relative;
-    padding: 0 4.347%;
+    padding: 0;
   }
   .page-header__text {
-    right: 4.347%;
+    right: 0;
+  }
+  .page-header__wrapper {
+    position: relative;
+    max-width: 1050px;
+    margin: 0 auto;
   }
 }
